@@ -1,0 +1,32 @@
+.navbar_size {
+margin:10px 10px;
+}
+
+.custom_logo {
+color: black;
+border-style: solid;
+padding: 1px 5px;
+font: italic small-caps bold 16px/2 cursive;
+transition-duration: 0.5s;
+}
+
+.custom_logo:hover {
+color:white;
+}
+
+.nav-custom {
+color: black;
+padding: 1px 10px;
+font: italic small-caps bold 24px/2 cursive;
+text-decoration:none;
+transition-duration: 0.5s;
+}
+
+.nav_custom:hover {
+color: white;
+}
+
+.dropdown_place {
+background: red;
+align: right;
+}

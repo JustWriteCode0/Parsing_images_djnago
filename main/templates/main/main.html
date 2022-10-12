@@ -1,0 +1,43 @@
+{% extends "main/header_footer.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Scrap</title>
+</head>
+<body>
+<link href="{% static 'main/css/general.css' %}" rel="stylesheet">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4 my-5  text-center">
+            <label class="form-label">Введите URL страницы</label>
+            <form class="input-group input_place" method="post">
+                {% csrf_token %}
+                {{ form.UsedURL }}
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Получить</button>
+            </form>
+            <div class="col-4">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+            {% for links in posts %}
+            <label>{{ links }}</label><br>
+            {% endfor %}
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
+
